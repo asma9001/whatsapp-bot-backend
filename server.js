@@ -25,7 +25,7 @@ global.io = io;
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://whatsapp-compaign-weld.vercel.app'  // 👈 Replace with your actual Vercel domain
+  'https://whatsapp-bot-frontend-6xit.vercel.app'  // 👈 Replace with your actual Vercel domain
 ];
 
 app.use(cors({
