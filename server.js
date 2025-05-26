@@ -25,7 +25,7 @@ global.io = io;
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://your-frontend-name.vercel.app'  // 👈 Replace with your actual Vercel domain
+  'https://whatsapp-compaign-weld.vercel.app'  // 👈 Replace with your actual Vercel domain
 ];
 
 app.use(cors({
@@ -50,7 +50,9 @@ app.use('/api', groupRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api', dashboardRoutes);
 app.use('/api', sessionRoutes);
-
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running!");
+});
 // Handle socket.io rooms for sessions
 io.on('connection', (socket) => {
   socket.on('join-session', (sessionId) => {
